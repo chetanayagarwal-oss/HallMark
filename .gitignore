@@ -1,0 +1,50 @@
+# dependencies
+node_modules/
+contracts/lib/
+
+# build output
+packages/web/dist/
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+*.tsbuildinfo
+
+# secrets and local env (only the *.example templates are committed)
+.env
+.env.*
+!.env.example
+env/*.env
+env/probe.addresses
+deploy/.env
+packages/web/.env*
+
+# runtime data, samples and calibration inputs
+data/
+
+# editor / OS
+.DS_Store
+.idea/
+.vscode/
+.claude/
+*.log
+
+# tests and test-only tooling (kept locally, not published)
+contracts/test/
+packages/*/test/
+vitest.config.ts
+scripts/local/
+scripts/e2e-testnet.ts
+scripts/gen-vectors.ts
+scripts/measure.ts
+scripts/probe-hedera.ts
+scripts/probe-facilitators.ts
+docs/*
+# the core-first docs named in the add-on spec are published; everything else in docs/ stays local
+!docs/CORE_MAP.md
+!docs/baseline-e2e.txt
+!docs/INTEGRATE.md
+!docs/RUN_AN_OPERATOR.md
+!docs/ADD_A_MODEL.md
+
+# packed alpha tarballs (scripts/pack-core.ts)
+dist-pack/
