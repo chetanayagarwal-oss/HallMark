@@ -1,4 +1,4 @@
-﻿# Script to create 100+ commits across Nov 5, 6, 7 and push to GitHub
+# Script to create 100+ commits across Nov 5, 6, 7 and push to GitHub
 
 $repoPath = "C:\Users\CHETANAY\OneDrive\Documents\hallmark"
 $srcPath  = "C:\Users\CHETANAY\OneDrive\Documents\hallmark-src"
@@ -555,3 +555,4 @@ git log --oneline | Measure-Object | Select-Object -ExpandProperty Count
 Write-Host "Pushing to origin main..."
 git push -u origin main --force
 Write-Host "Done!"
+
