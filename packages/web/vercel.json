@@ -1,0 +1,25 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "pnpm exec vite build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/console/(.*)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/console",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/docs",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/use-cases",
+      "destination": "/index.html"
+    }
+  ],
+  "installCommand": "cd ../.. && pnpm install --frozen-lockfile --filter \"@hallmark/web...\""
+}
